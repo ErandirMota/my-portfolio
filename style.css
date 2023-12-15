@@ -11,23 +11,13 @@
   background-color: #191919;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: rgb(78, 78, 242);
-}
-
 nav {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  background: #191919;
-  height: 8vh;
-  padding-top: 30px;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
 }
 
 .portfolio {
@@ -39,27 +29,28 @@ nav {
   color: rgb(78, 78, 242);
 }
 
-.mobile-menu {
-  display: none;
+li {
+  color: white;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 25px;
   cursor: pointer;
 }
 
-.mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  transition: 0.3s;
+li:hover {
+  color: rgb(78, 78, 242);
+  transition: 0.5s;
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
+.menu-link {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
+.menu-link:hover {
+  color: rgb(78, 78, 242);
+  transition: 0.5s;
 }
 
 .my-name {
@@ -100,7 +91,6 @@ header img {
 header img:hover {
   transform: scale(1.05);
 }
-
 
 section {
   display: flex;
@@ -192,7 +182,7 @@ section div button:hover {
 }
 
 .card p {
-  color: #ffffffda;
+  color: #ffffff;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -207,7 +197,7 @@ section div button:hover {
 }
 
 .card a:hover {
-  background-color: #19191976;
+  background-color: transparent;
   transition: 0.5s;
   border: 2px solid rgb(78, 78, 242);
 }
@@ -254,7 +244,6 @@ footer p {
   cursor: pointer;
 }
 
-
 .social a:hover {
   background-color: rgb(113, 113, 248);
   transform: scale(1.2);
@@ -262,67 +251,12 @@ footer p {
 }
 
 @media screen and (max-width: 950px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #000;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  .nav-list.active {
-    transform: translateX(0);
-  }
-
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
-
-  .mobile-menu.active .line2 {
-    opacity: 0;
-  }
-
-  .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-  }
-
   /* GENERAL CLASS */
   section {
     flex-direction: column;
   }
 
   /* HEADER */
-
   .img-home {
     display: none;
   }
