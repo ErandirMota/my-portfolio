@@ -251,12 +251,17 @@ footer p {
 }
 
 @media screen and (max-width: 950px) {
+
   /* GENERAL CLASS */
   section {
     flex-direction: column;
   }
 
   /* HEADER */
+  header ul {
+    display: none;
+  }
+
   .img-home {
     display: none;
   }
